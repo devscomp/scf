@@ -1,8 +1,8 @@
 Type: Component
-Name: scf
+Name: devscomp/scf
 Provider:
   - 腾讯云
-Version: 0.0.18
+Version: 0.0.19
 Description: 腾讯云函数计算组件，可以快速部署腾讯云云函数
 HomePage: https://www.qcloud.com/
 Tags:

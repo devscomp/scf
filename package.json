@@ -1,6 +1,6 @@
 {
-  "name": "@serverless-devs/scf-tencent",
-  "version": "0.0.18",
+  "name": "devscomp/scf",
+  "version": "0.0.19",
   "description": "Serverless Devs Tool SCF Component For Tencent Cloud",
   "keywords": [
     "Serverless",
@@ -21,10 +21,6 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Serverless-Devs/scf-tencent"
   },
   "dependencies": {
     "@serverless-devs/core": "^0.0.61",
