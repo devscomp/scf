@@ -132,7 +132,6 @@ class SCFComponent extends Component {
     // must add this property for debuging online
     this.state.lambdaArn = scfOutput.FunctionName
 
-    console.log(this)
     await this.save()
 
     console.log(`Deployed Tencent ${CONFIGS.compFullname}...`)
