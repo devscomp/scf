@@ -155,7 +155,7 @@ class SCFComponent extends Component {
     const appId = temp_credentials.AccountID
 
     reportComponent("scf", {
-      "commands": 'deploy',
+      "commands": 'remove',
       "uid": appId,
     });
     // 默认值
