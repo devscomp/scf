@@ -4,7 +4,8 @@ const {
   getCredential,
   help,
   commandParse,
-  loadComponent
+  loadComponent,
+    reportComponent
 } = require('@serverless-devs/core')
 const { Component } = require('@serverless-devs/s-core')
 const { Scf } = require('tencent-component-toolkit')
@@ -13,6 +14,7 @@ const { prepareInputs, prepareAliasInputs, getType, getDefaultProtocol } = requi
 const CONFIGS = require('./config')
 
 class SCFComponent extends Component {
+
   async deploy(inputs) {
     console.log(`Deploying ${CONFIGS.compFullname}`)
     const temp_credentials = await getCredential(inputs.project.access)
@@ -21,6 +23,11 @@ class SCFComponent extends Component {
       SecretKey: temp_credentials.SecretKey
     }
     const appId = temp_credentials.AccountID
+
+    reportComponent("scf", {
+      "commands": 'deploy',
+      "uid": appId,
+    });
 
     // 默认值
     const region = inputs.region || CONFIGS.region
@@ -148,6 +155,10 @@ class SCFComponent extends Component {
     }
     const appId = temp_credentials.AccountID
 
+    reportComponent("scf", {
+      "commands": 'deploy',
+      "uid": appId,
+    });
     // 默认值
     await this.init()
 
