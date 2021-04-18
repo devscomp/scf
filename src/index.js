@@ -35,7 +35,6 @@ class SCFComponent extends Component {
     await this.init()
     const properties = inputs.props
     const { state } = this
-    console.log(state)
 
     // apigateway
     if (state && state.apigw && properties.events) {
