@@ -45,9 +45,10 @@ class SCFComponent extends Component {
           }
         }
       }
+      console.log(properties.events[0].apigw)
     }
 
-    console.log(properties.events[0].apigw)
+ 
 
     // prepare scf inputs parameters
     const { scfInputs, existApigwTrigger, triggers, useDefault } = await prepareInputs(
